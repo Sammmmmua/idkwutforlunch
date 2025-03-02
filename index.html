@@ -1,11 +1,39 @@
 <!doctype html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>idontevenknowwutiwantforlunch</title>
         <link rel="shortcut icon" href="chewedpen.png">
         <meta charset="UTF-8">
 
         <style>
+
+@media (max-width: 600px) {
+    #bottomright {
+        display: block; 
+        top: 3vh; 
+        left: 3vw; 
+      } 
+	body {
+      background-color: red; 
+
+      }
+}
+
+
+#bottomright {
+   /*display: none; this is not overriding*/
+position: fixed; 
+background-color: greenyellow; 
+width: 3vw; 
+min-width: 90px; 
+max-width: 300px; 
+height: 3vh;
+bottom: 3vh; 
+right: 3vw; 
+z-index: 10000; 
+}
+
             /*i took out the bracks around your-div-id cuz it wouldnt work. I consulted gpt and it recommended that and worked*/
         #your-div-id1 {
                 position:fixed;
@@ -194,11 +222,32 @@
                 <img id="writing" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2FpOXA3d2N4YWN6bThnOG81NmoxcTNpaXByZjU2bzc4aXRzOHM5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tbkx219gADIH1UA39X/giphy.gif">
                 <img id="tape" src="—Pngtree—tape paper texture_8285186.png">
                 <img id="peachqt" src="peachquote.png">
-                <img id="peach" src="peach.png">
+                <!--<img id="peach" src="peach.png">-->
+                <a href="Site.html">
+                    <img id="peach" src="peach.png">
+                </a>
+
+                <img  alt="the background is the gif of a paper being crumbled"
+               id="crumbledpaper" class="body" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXRzcTFxNmNtYnIyZ2FleTVtazNubmRqZWM4OHEyeWcybjVmODZ1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rcFs59ww1R7yeFszmo/giphy.gif">
+               
+               <img  alt="the gif of someone endlessly tapping their pen"
+               id="writing" class="body" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2FpOXA3d2N4YWN6bThnOG81NmoxcTNpaXByZjU2bzc4aXRzOHM5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tbkx219gADIH1UA39X/giphy.gif">
+
+               <img  alt="a semi-tranparent tape on a paper"
+               id="tape" class="body" src="—Pngtree—tape paper texture_8285186.png">
+
+               <img  alt="a small piece of paper hand-torn from a page, and it reads'Shall I put my hair behind? Do I dare to eat a peach?'"
+               id="peachqt" class="body" src="peachquote.png">
+
+               <!--<img  alt="a half-eaten peach in the style of oil painting"
+               id="peach" class="body" src="peach.png"> this made another peach image and rendered my internal link useless-->
+               
 
                 <video loop controls id="stopmotionpen" src="stopmotionpen.mp4"
                 type="video/mp4"></video>
 
+                <div id="bottomright"></div>
+                
                 <div id="your-div-id1"> What kind of writer do you want to be?   
                 </div>
                 <a id="lunchwheel" href=https://wheeldecide.com/wheels/food-drink/lunch-wheel> <div id="your-div-id2"> I dont even know wut I want for lunch.</a>
@@ -239,7 +288,14 @@
                 <div id="your-div-id3" class="your-div-id4">They say</div>
                 <div class="your-div-id3" id="your-div-id4">yet</div>-->
 
-
+                <script>
+                    const isComp = window.matchMedia('(min-width: 600px)')
+                    
+                    if (isComp.matches) {
+                    alert("you're probably on your desktop!"); 
+                    }
+                    
+                    </script>
 
 
                  </body>
